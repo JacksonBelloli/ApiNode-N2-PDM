@@ -1,0 +1,20 @@
+const express = require('express')
+const router = express.Router()
+const alunos = require('./alunos')
+const graduacao = require('./graduacao')
+const matriculas = require('./matriculas')
+const modalidade_matricula = require('./modalidade_matricula')
+const modalidades = require('./modalidades')
+const planos = require('./planos')
+const usuarios = require('./usuarios')
+
+router.use(express.json())
+router.use('/alunos', alunos)
+router.use('/graduacao', graduacao)
+router.use('/matriculas', matriculas)
+router.use('/modalidade-matricula', modalidade_matricula)
+router.use('/modalidades', modalidades)
+router.use('/planos', planos)
+router.use('/usuarios', usuarios)
+
+module.exports = router
